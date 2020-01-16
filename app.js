@@ -16,7 +16,7 @@ var express =         require("express"),
     comment =               require("./models/comment"),
     User =                  require("./models/user");
     require("dotenv").config();
-    console.log(process.env.DATABASEURL)
+    
 mongoose.connect(process.env.DATABASEURL);
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
