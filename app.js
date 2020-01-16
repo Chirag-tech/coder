@@ -15,7 +15,9 @@ var express =         require("express"),
     authenticateRoutes =    require("./routes/index"),
     comment =               require("./models/comment"),
     User =                  require("./models/user");
-mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser: true});
+    require("dotenv").config();
+    console.log(process.env.DATABASEURL)
+mongoose.connect(process.env.DATABASEURL);
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname+"/public"));
