@@ -17,7 +17,7 @@ var express =         require("express"),
     User =                  require("./models/user");
     require("dotenv").config();
     
-mongoose.connect("mongodb://localhost/yelp_camp",{
+mongoose.connect(process.env.DATABASEURL,{
     useNewUrlParser:true,
     useCreateIndex:true,
     useUnifiedTopology:true
@@ -26,6 +26,8 @@ mongoose.connect("mongodb://localhost/yelp_camp",{
 }).catch(err =>{
     console.log("ERROR:"+err.message);
 });
+
+
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname+"/public"));

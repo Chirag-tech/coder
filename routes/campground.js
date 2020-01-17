@@ -15,7 +15,7 @@ router.get("/",function(req,res){
 router.post("/",middleWare.isLoggedIn,function(req,res){
     var image = req.body.image;
     var name=req.body.name;
-    price:req.body.price;
+    var price=req.body.price;
     var desc =req.body.description;
     var author={
         id:req.user._id,
