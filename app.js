@@ -27,6 +27,16 @@ mongoose.connect(process.env.DATABASEURL,{
     console.log("ERROR:"+err.message);
 });
 
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = process.env.DATABASEURL;
+// const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology:true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+
 
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -56,7 +66,7 @@ app.use("/campgrounds",campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/",authenticateRoutes);
 //initializing server
-var port = process.env.port||1310;
-app.listen(port,function(){
+var PORT = process.env.PORT||1310;
+app.listen(PORT,function(){
     console.log("Server started....");
 });
