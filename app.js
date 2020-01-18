@@ -26,18 +26,6 @@ mongoose.connect(process.env.DATABASEURL,{
 }).catch(err =>{
     console.log("ERROR:"+err.message);
 });
-
-// const MongoClient = require('mongodb').MongoClient;
-// const uri = process.env.DATABASEURL;
-// const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology:true });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
-
-
-
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname+"/public"));
