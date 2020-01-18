@@ -16,8 +16,8 @@ var express =         require("express"),
     comment =               require("./models/comment"),
     User =                  require("./models/user");
     require("dotenv").config();
-    //process.env.DATABASEURL || 
-mongoose.connect("mongodb://localhost:27017/yelp_camp",{
+ 
+mongoose.connect(process.env.DATABASEURL,{
     useNewUrlParser:true,
     useCreateIndex:true,
     useUnifiedTopology:true
