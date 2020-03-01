@@ -17,7 +17,7 @@ var express =         require("express"),
     User =                  require("./models/user");
     require("dotenv").config();
  
-mongoose.connect("mongodb://localhost/yelp_camp",{
+mongoose.connect("mongodb+srv://dbUser:dbUser@cluster0-jz1fy.mongodb.net/test?retryWrites=true&w=majority",{
     useNewUrlParser:true,
     useCreateIndex:true,
     useUnifiedTopology:true
