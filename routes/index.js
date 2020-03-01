@@ -42,4 +42,7 @@ router.get("/logout",function(req,res){
     req.flash("success","Successfully,logged you out !!");
     res.redirect("/campgrounds");
 });
+router.get("/about",function(req,res){
+    res.render("about.ejs");
+});
 module.exports =router;

@@ -16,3 +16,33 @@
 .link{
     padding: initial;
 }
+.content {
+    text-align:relative;
+    padding-left: 20px;
+}
+.content a{
+    text-align: inherit;
+    font-size: 50px;
+    padding-right: 10px;
+}
+.content a:hover{
+    font-size: 45px;
+}
+.content h5{
+    padding-top: 20px;
+}
+.content .dp{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid #fff;
+    background: url(me.jpg) no-repeat center center/cover;
+}
+
+    
+
+.about{
+    background:url(cool-background\ \(1\).svg) no-repeat center center/cover;
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
